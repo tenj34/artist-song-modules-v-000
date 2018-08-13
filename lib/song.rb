@@ -16,7 +16,7 @@ class Song
   @@songs = []
 
   def initialize
-    super
+    @songs << song
   end
 
   def artist=(artist)
