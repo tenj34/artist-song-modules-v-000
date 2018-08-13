@@ -6,9 +6,10 @@ require_relative '../lib/concerns/paramble'
 
 class Song
   extend Memorable::ClassMethods
-  extend Findable::ClassMethods
-  include Paramble::InstanceMethods
   include Memorable::InstanceMethods
+  include Paramble:: InstanceMethods
+  extend Findable
+  include Paramble
 
   attr_accessor :name
   attr_reader :artist
@@ -16,7 +17,7 @@ class Song
   @@songs = []
 
   def initialize
-    @songs << self
+    super
   end
 
   def artist=(artist)
