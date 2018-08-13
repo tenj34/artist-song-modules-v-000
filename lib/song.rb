@@ -8,13 +8,14 @@ class Song
   extend Memorable
   extend Findable
   include Paramble::InstanceMethods
-  
+
   attr_accessor :name
   attr_reader :artist
 
   @@songs = []
 
   def initialize
+    super
     @@songs << self
   end
 
