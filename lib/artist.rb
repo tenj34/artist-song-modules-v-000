@@ -6,6 +6,8 @@ require_relative '../lib/concerns/paramble'
 class Artist
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
+  extend Findable
+  include Paramble
 
 
   attr_accessor :name
