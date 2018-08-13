@@ -25,8 +25,4 @@ class Artist
     song.artist = self
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
-
 end
